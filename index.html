@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajin Betul Kamu Click Yee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .response {
+            font-size: 1.5em; 
+            color: #e74c3c;
+            margin-top: 20px;
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 1.2em;
+            width: 200px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin-top: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Well..Well.. Well.. look who decided to click in...</h1>
+    <p>Insert your age:</p>
+    <input type="number" id="ageInput" placeholder="Enter your age">
+    <button onclick="checkAge()">Submit</button>
+
+    <div id="response" class="response"></div>
+
+    <script>
+        function checkAge() {
+            // Get the age input value
+            let age = parseInt(document.getElementById('ageInput').value);
+            let responseMessage = '';
+
+            // Check if the input is valid
+            if (isNaN(age)) {
+                responseMessage = "Please enter a valid age.";
+            } else if (age <= 17) {
+                responseMessage = "OOPS! YOURE TOO YOUNG TO BE THIS DEPRESSED LMAOOO";
+            } else {
+                responseMessage = "Now...what the heck are you being depressed of?? Lock in bro tf??";
+            }
+
+            // Display the response message
+            document.getElementById('response').innerText = responseMessage;
+        }
+    </script>
+</body>
+</html>
